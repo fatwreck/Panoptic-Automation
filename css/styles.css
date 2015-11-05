@@ -31,7 +31,7 @@
   font-style: normal;
   font-stretch: normal;
   unicode-range: U+0020-25CA; }
-* {
+*:not(.slider-service div) {
   transition: .2s ease-in-out;
   -webkit-transition: .2s ease-in-out; }
 
@@ -41,9 +41,7 @@ body {
   color: #2b2b2b; }
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1; }
-
-h1, h2 {
+  line-height: 1;
   font-family: inherit; }
 
 h1 {
@@ -76,6 +74,9 @@ header {
 .main-section {
   padding: 20px 0 0 0; }
 
+.main-section .row:first-child .columns {
+  padding: 20px; }
+
 .main-section .about-pics img {
   display: block;
   margin: 15px auto; }
@@ -105,19 +106,26 @@ header {
   background-color: #2b2b2b; }
 
 .navigation-section {
-  padding: 30px 0;
+  padding: 20px;
   display: block;
   color: #f6ece2; }
   .navigation-section h1 {
-    font-family: "BemboStd-Semibold";
+    font-family: "BemboStd-Regular";
     color: inherit;
-    font-size: 47px;
-    margin: 50px 0 0 0; }
+    font-size: 32px;
+    margin: 20px 0 10px 0;
+    line-height: 1; }
   .navigation-section p {
-    width: 40%; }
+    width: 100%;
+    line-height: 1.4; }
 
 .navigation-section.services {
   background-image: none; }
+
+.navigation-section.home {
+  background: url("../img/home-bg.jpg") center no-repeat;
+  background-size: cover;
+  padding: 30px 10px; }
 
 .top-bar-section ul.right li {
   margin: 0 20px;
@@ -178,10 +186,26 @@ header {
     margin: 0;
     left: 0; }
 
-.small.radius.button {
+.small.radius.button.light {
   background-color: transparent;
   border: 1px solid #f6ece2;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: #f6ece2;
+  margin: 0; }
+
+.small.radius.button.light:hover {
+  background-color: #f6ece2;
+  color: #2b2b2b; }
+
+.small.radius.button.dark {
+  background-color: transparent;
+  border: 1px solid #2b2b2b;
+  text-transform: uppercase;
+  color: #2b2b2b; }
+
+.small.radius.button.dark:hover {
+  background-color: #2b2b2b;
+  color: #f6ece2; }
 
 .right-col {
   border-left: 1px solid #76726e;
@@ -217,19 +241,98 @@ footer {
   footer li:last-child {
     margin-right: 0; }
 
+/****** HOME PAGE ******/
+.news {
+  margin-top: 0;
+  background-color: #fff;
+  padding: 20px; }
+
+.home-services-bg {
+  background-image: url(../img/home-service-bg.jpg);
+  background-size: cover; }
+
+.home-slides {
+  color: #f6ece2;
+  margin-bottom: 35px; }
+  .home-slides h1, .home-slides h2, .home-slides a {
+    color: inherit; }
+
+.home-slides .slides-nav .top-bar-section.sub-nav ul {
+  border-bottom: 1px solid #76726e;
+  border-top: none; }
+  .home-slides .slides-nav .top-bar-section.sub-nav ul li {
+    border-top: none; }
+  .home-slides .slides-nav .top-bar-section.sub-nav ul li.active, .home-slides .slides-nav .top-bar-section.sub-nav ul li:hover {
+    border-top: none;
+    border-bottom: 3px solid #f6ece2; }
+
+.slider-service div h2, .slider-service div p {
+  padding: 0 5px; }
+
+button.slick-next, button.slick-prev {
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out; }
+
+button:hover.slick-next, button:hover.slick-prev {
+  background-color: transparent;
+  opacity: .7;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out; }
+
+.arrow-left, .arrow-right {
+  display: inline-block;
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 32px;
+  height: 58px;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out; }
+
+.arrow-left {
+  background-image: url(../img/arrow-left.png);
+  background-image: linear-gradient(transparent, transparent), url(../img/arrow-left.svg); }
+
+.arrow-right {
+  background-image: url(../img/arrow-right.png);
+  background-image: linear-gradient(transparent, transparent), url(../img/arrow-right.svg); }
+
+.controls {
+  margin: 100px 20px; }
+  .controls button {
+    background-color: transparent;
+    margin-top: 50px; }
+  .controls #next-services-home {
+    float: right; }
+
 /****** MEDIA QUERIES ******/
 /* Define mobile styles */
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+@media only screen and (min-width: 40.063em) {
+  .navigation-section p {
+    width: 60%; }
+
+  .main-section .row:first-child .columns {
+    padding: 0 20px; }
+
+  .home-slides {
+    padding: 30px; }
+    .home-slides h1 {
+      margin-bottom: 10px; } }
 /* min-width 641px, medium screens */
 /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 @media only screen and (min-width: 64.063em) {
   .navigation-section {
-    padding: 30px 0 0 0;
-    display: block; }
+    padding: 30px 0 0 0; }
     .navigation-section h1 {
-      font-family: "BemboStd-Semibold";
       font-size: 55px;
       margin: 80px 0 30px 0; }
+    .navigation-section p {
+      width: 40%; }
+
+  .navigation-section.home {
+    padding-bottom: 60px; }
 
   .top-bar-section.sub-nav {
     margin: 0; }
@@ -257,7 +360,27 @@ footer {
     padding: 50px 0 40px 0; }
     footer li {
       font-size: 18px;
-      margin-right: 50px; } }
+      margin-right: 50px; }
+
+  .main-section .row .columns.news {
+    margin-top: -145px;
+    padding: 40px 120px; }
+    .main-section .row .columns.news .date {
+      margin-top: 20px;
+      font-size: 16px; }
+
+  /**** HOME ****/
+  .home-services-bg {
+    background-image: url(../img/home-service-bg.jpg);
+    background-size: cover; }
+
+  .home-slides {
+    color: #f6ece2;
+    padding: 60px 90px; }
+    .home-slides h1, .home-slides h2 {
+      color: inherit; }
+    .home-slides h1 {
+      margin-bottom: 30px; } }
 /* min-width 1025px, large screens */
 /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
 @media only screen and (min-width: 90.063em) {
@@ -266,3 +389,37 @@ footer {
 /* min-width 1441px, xlarge screens */
 /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
 /* min-width 1921px, xxlarge screens */
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+.animateMeUp {
+  opacity: 0; }
+
+.animated {
+  -webkit-animation-duration: .6s;
+  animation-duration: .6s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+/***** FADEINUP *****/
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 50px, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 50px, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp; }

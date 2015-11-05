@@ -16,7 +16,7 @@
     <div class="off-canvas-wrap" data-offcanvas="">
         <div class="inner-wrap">
           <nav class="tab-bar">
-            <section  id="bgImg" class="navigation-section">
+            <section  id="bgImg" class="navigation-section home">
                 <div class="row">
                     <div class="large-12 columns">
                         <section class="left tab-bar-section">
@@ -31,32 +31,6 @@
                                     <li><a href="careers.php">Careers</a></li>
                                     <li><a href="about.php">About</a></li>
                                     <li><a href="contact.php">Contact</a></li>
-<!--
-                                    <li class="has-dropdown">
-                                        <a href="blog.html">Blog</a>
-                                        <ul class="dropdown">
-                                            <li><a href="blog.html">Archive</a></li>
-                                            <li><a href="post.html">Single</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-dropdown">
-                                        <a href="page.html">Page</a>
-                                        <ul class="dropdown">
-                                            <li><a href="page.html">Full-wdith</a></li>
-                                            <li><a href="sidebar-left.html">Left Sidebar</a></li>
-                                            <li><a href="sidebar-right.html">Right Sidebar</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="portfolio.html">Portfolio</a></li>
-                                    <li class="has-dropdown">
-                                        <a href="#">Dropdown</a>
-                                        <ul class="dropdown">
-                                            <li><a href="#">First link in dropdown</a></li>
-                                            <li><a href="#">Second link in dropdown</a></li>
-                                            <li><a href="#">Third link in dropdown</a></li>
-                                        </ul>
-                                    </li>
--->
                                 </ul>
                             </section>
                         </nav>
