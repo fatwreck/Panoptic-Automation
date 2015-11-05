@@ -93,41 +93,25 @@ a {
 a:hover {
     color: $light-grey;
 }
+.hr-full {
+    width: 103%;
+    margin: 40px -1.6%;
+    border-top: 1px solid $light-grey;
+}
+.row.hr {
+    border-top: 1px solid $light-grey;
+    margin: 20px -16px 40px -16px;
+}
 header {
   background-color: $grey;
 }
 .main-section {
   padding: 20px 0 0 0;
 }
-
-.copyright-section {
-/*
-    background-color: #333;
-    color: #fff;
-    padding: 25px 0 0 0;
-*/
-}
-/*
-.fullWidth {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: initial;
-  border: 1px solid red;
-}
-.blue {
-  background-color: $grey;
-  padding: 30px 0 0 0;
-}
-  .fullWidth .row {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1415px;
-    border: 1px solid pink;
+.main-section .about-pics img {
+    display: block;
+    margin: 15px auto;
   }
-*/
-
-
 
 
 /*******************************
@@ -147,25 +131,37 @@ header {
     position: inherit;
     padding-right: 40px;
 }
-.tab-bar {
-  height: inherit;
+.tab-bar-section a {
+    display: inline-block;
 }
 .tab-bar, .navigation-section, .top-bar, .top-bar-section ul {
-  background-color: $grey;
+  background-color: transparent;
+}
+.tab-bar {
+    height: inherit;
+    background-color: $grey;
 }
 .navigation-section {
-  padding: 30px 0;
-  display: block;
+    padding: 30px 0;
+    display: block;
+    color: $cream;
     h1 {
       font-family: $font-bembosemi;
-      color: $cream;
+      color: inherit;
       font-size: 47px;
       margin: 50px 0 0 0;
     }
+    p {
+        width: 40%;
+    }
 }
+.navigation-section.services {
+    background-image: none;
+}
+    
 .top-bar-section ul.right li {
     margin: 0 20px;
-    background-color: $grey;
+    background-color: transparent;
     li:last-child {
         margin-right: 0;
     }
@@ -174,7 +170,7 @@ header {
     border-top: 1px solid $light-grey;
     li {
         list-style: none;
-        border-top: 3px solid $grey;
+        border-top: 3px solid transparent;
     }
     li.active {
         border-top: 3px solid $cream;
@@ -183,24 +179,20 @@ header {
         border-top: 3px solid $cream;
       }
     li:not(.has-form) a:not(.button) {
-        background: $grey;
+        background-color: transparent;
       }
     li.active:not(.has-form) a:not(.button) {
-        background: $grey;
+        background-color: transparent;
       }
     li a {
         padding: 0 !important;
     }
-//    li:last-child a {
-//        padding: 0 !important;
-//    }
 }
 .top-bar-section.sub-nav ul {
     width:100%;
     li {
         padding: 7px 0;
-        background-color: $grey;
-//        text-transform: capitalize;
+        background-color: transparent;
     }
 }
 .top-bar-section ul li > a {
@@ -212,11 +204,10 @@ header {
 }
 .top-bar-section li:not(.has-form):not(.button):hover {
     border-top: 3px solid $cream;
-    background-color: $grey;
+    background-color: transparent;
 }
 .top-bar-section li:not(.has-form) a:not(.button):hover {
-    background-color: #555555;
-    background: $grey;
+    background-color: transparent;
     color: $cream;
 }
 .top-bar-section li.active:not(.has-form) a:not(.button) {
@@ -224,20 +215,24 @@ header {
 }
 .top-bar-section li.active:not(.has-form) a:not(.button):hover {
     border-top: none;
-    background-color: $grey;
+    background-color: transparent;
 }
 
 .right-small {
     border: none;
 }
 .tab-bar .menu-icon {
-    color: $cream;
     height: 6rem;
     span::after {
         width: 1.3rem;
         margin: 0;
         left: 0;
     }
+}
+.small.radius.button {
+    background-color: transparent;
+    border: 1px solid $cream;
+    text-transform: uppercase;
 }
 .right-col {
     border-left: 1px solid $light-grey;
@@ -301,11 +296,11 @@ footer {
 @media only screen and (min-width: 64.063em) { 
 
     .navigation-section {
-      padding: 30px 0 0 0;
-      display: block;
+        padding: 30px 0 0 0;
+        display: block;
         h1 {
           font-family: $font-bembosemi;
-          color: $cream;
+//          color: $cream;
           font-size: 55px;
           margin: 80px 0 30px 0;
         }
@@ -316,17 +311,21 @@ footer {
             margin: 0 75px 0 0;
         }
     }
+    .navigation-section.services {
+        background: url('../img/services.jpg') right no-repeat;
+        background-size: contain; 
+    }
     h1 {
       font-size: 50px;
     }
     p {
-        font-size: 22px;
+        font-size: 21px;
     }
     .main-section {
       padding: 60px 0 0 0;
     }
-    .main-section .columns.white-space-right {
-        width: 50%;
+    .main-section .columns.white-space-right p {
+        width: 70%;
     }
     footer {
         background-color: #fff;
