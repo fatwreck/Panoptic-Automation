@@ -63,10 +63,10 @@ $cream: #f6ece2;
 
 $border: 1px solid red;
 
-*:not(.slider-service div) {
-    transition: .2s ease-in-out;
-    -webkit-transition: .2s ease-in-out;
-}
+//*:not(.slider-service div) {
+//    transition: .2s ease-in-out;
+//    -webkit-transition: .2s ease-in-out;
+//}
 body {
   background-color: #fff;
   font-family: $font-bemboreg;

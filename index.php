@@ -39,7 +39,7 @@
                 </div>
                 <div class="medium-2 large-4 show-for-medium-up columns">
                     <p class="controls">
-                        <button type="button" class="slick-prev">Previous</button>
+                        <button type="button" class="slick-prev" id="prev-services-home">Previous</button>
 <!--
                         <button type="button" class="slick-prev" id="prev-services-home">
                             <span class="arrow-left"></span>
@@ -48,7 +48,6 @@
                         <button type="button" class="slick-next" id="next-services-home">
                             <span class="arrow-right"></span>
                         </button>
-                        
                     </p>
                 </div>
             </div>

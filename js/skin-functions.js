@@ -43,9 +43,9 @@ $(document).ready(function() {
         arrows: false,
         slidesToShow: 1,
         adaptiveHeight: true,
-        infinite: true
-//        prevArrow:$('#prev-services-home'),
-//        nextArrow:$('#next-services-home')
+        infinite: true,
+        prevArrow: $('#prev-services-home'),
+        nextArrow: $('#next-services-home')
       });
     
     // GET URL
