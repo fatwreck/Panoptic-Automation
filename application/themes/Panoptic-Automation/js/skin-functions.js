@@ -49,12 +49,12 @@ $(document).ready(function (){
       });
     
     // GET URL
-    var newURL = window.location.pathname;
-    console.log (newURL);
-    
-    if (newURL === 'services.php') {
-        document.getElementById('bgImg').className = 'navigation-section' + newURL;
-    }
+//    var newURL = window.location.pathname;
+//    console.log (newURL);
+//    
+//    if (newURL === 'services.php') {
+//        document.getElementById('bgImg').className = 'navigation-section' + newURL;
+//    }
     
     // ACTIVE CLASS ON NAV
 //    $(function() {

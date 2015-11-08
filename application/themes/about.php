@@ -1,8 +1,7 @@
-<?php include "inc/head-nav.php" ;?>
+<?php include "inc/head-nav-full.php" ;?>
 
 <h1>About Us</h1>
                     
-<?php include "inc/main-nav-off-canvas.php" ;?>
 <section class="main-section">
     <div class="row">
         <div class="small-12 large-10 columns">

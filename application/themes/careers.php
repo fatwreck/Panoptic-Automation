@@ -1,8 +1,7 @@
-<?php include "<?= $view->getThemePath() ?>/inc/head-nav.php" ;?>
+<?php include "inc/head-nav-full.php" ;?>
 
 <h1>Plain Content</h1>
                     
-<?php include "<?= $view->getThemePath() ?>/inc/main-nav-off-canvas.php" ;?>
 <section class="main-section">
     <div class="row">
         <div class="large-2 columns left-col show-for-large-up"></div>
@@ -21,4 +20,4 @@
     </div>
 </section>
 
-<?php include "<?= $view->getThemePath() ?>/inc/footer.php"; ?>
+<?php include "inc/footer.php"; ?>

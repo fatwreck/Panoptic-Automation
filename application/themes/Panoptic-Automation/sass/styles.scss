@@ -2,11 +2,11 @@
 
 @font-face {
 	font-family:'ProximaNova-Regular';
-	src: url('/fonts/ProximaNova-Regular_gdi.eot');
-	src: url('/fonts/ProximaNova-Regular_gdi.eot?#iefix') format('embedded-opentype'),
-		url('/fonts/ProximaNova-Regular_gdi.woff') format('woff'),
-		url('/fonts/ProximaNova-Regular_gdi.ttf') format('truetype'),
-		url('/fonts/ProximaNova-Regular_gdi.svg#ProximaNova-Regular') format('svg');
+	src: url('../fonts/ProximaNova-Regular_gdi.eot');
+	src: url('../fonts/ProximaNova-Regular_gdi.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-Regular_gdi.woff') format('woff'),
+		url('../fonts/ProximaNova-Regular_gdi.ttf') format('truetype'),
+		url('../fonts/ProximaNova-Regular_gdi.svg#ProximaNova-Regular') format('svg');
 	font-weight: 400;
 	font-style: normal;
 	font-stretch: normal;
@@ -15,11 +15,11 @@
 
 @font-face {
 	font-family:'ProximaNova-Bold';
-	src: url('/fonts/ProximaNova-Bold_gdi.eot');
-	src: url('/fonts/ProximaNova-Bold_gdi.eot?#iefix') format('embedded-opentype'),
-		url('/fonts/ProximaNova-Bold_gdi.woff') format('woff'),
-		url('/fonts/ProximaNova-Bold_gdi.ttf') format('truetype'),
-		url('/fonts/ProximaNova-Bold_gdi.svg#ProximaNova-Bold') format('svg');
+	src: url('../fonts/ProximaNova-Bold_gdi.eot');
+	src: url('../fonts/ProximaNova-Bold_gdi.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/ProximaNova-Bold_gdi.woff') format('woff'),
+		url('../fonts/ProximaNova-Bold_gdi.ttf') format('truetype'),
+		url('../fonts/ProximaNova-Bold_gdi.svg#ProximaNova-Bold') format('svg');
 	font-weight: 700;
 	font-style: normal;
 	font-stretch: normal;
@@ -28,11 +28,11 @@
 
 @font-face {
 	font-family:'BemboStd-Regular';
-	src: url('/fonts/BemboStd_gdi.eot');
-	src: url('/fonts/BemboStd_gdi.eot?#iefix') format('embedded-opentype'),
-		url('/fonts/BemboStd_gdi.woff') format('woff'),
-		url('/fonts/BemboStd_gdi.ttf') format('truetype'),
-		url('/fonts/BemboStd_gdi.svg#BemboStd-Regular') format('svg');
+	src: url('../fonts/BemboStd_gdi.eot');
+	src: url('../fonts/BemboStd_gdi.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/BemboStd_gdi.woff') format('woff'),
+		url('../fonts/BemboStd_gdi.ttf') format('truetype'),
+		url('../fonts/BemboStd_gdi.svg#BemboStd-Regular') format('svg');
 	font-weight: 400;
 	font-style: normal;
 	font-stretch: normal; 
@@ -41,11 +41,11 @@
 
 @font-face {
 	font-family:'BemboStd-Semibold';
-	src: url('/fonts/BemboStd-Semibold_gdi.eot');
-	src: url('/fonts/BemboStd-Semibold_gdi.eot?#iefix') format('embedded-opentype'),
-		url('/fonts/BemboStd-Semibold_gdi.woff') format('woff'),
-		url('/fonts/BemboStd-Semibold_gdi.ttf') format('truetype'),
-		url('/fonts/BemboStd-Semibold_gdi.svg#BemboStd-Semibold') format('svg');
+	src: url('../fonts/BemboStd-Semibold_gdi.eot');
+	src: url('../fonts/BemboStd-Semibold_gdi.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/BemboStd-Semibold_gdi.woff') format('woff'),
+		url('../fonts/BemboStd-Semibold_gdi.ttf') format('truetype'),
+		url('../fonts/BemboStd-Semibold_gdi.svg#BemboStd-Semibold') format('svg');
 	font-weight: 600;
 	font-style: normal;
 	font-stretch: normal;
@@ -60,7 +60,6 @@ $font-bembosemi: 'BemboStd-Semibold';
 $light-grey: #76726e;
 $grey: #2b2b2b;
 $cream: #f6ece2;
-
 $border: 1px solid red;
 
 //*:not(.slider-service div) {
@@ -107,7 +106,7 @@ header {
   padding: 20px 0 0 0;
 }
 .main-section .row:first-child .columns {
-    padding: 20px;
+//    padding: 20px;
 }
 .main-section .about-pics img {
     display: block;
@@ -388,7 +387,7 @@ button:hover.slick-next, button:hover.slick-prev {
         width: 60%;
     }
     .main-section .row:first-child .columns {
-        padding: 0 20px;
+//        padding: 0 20px;
     }
     .home-slides {
         padding: 30px;
@@ -405,23 +404,23 @@ button:hover.slick-next, button:hover.slick-prev {
 @media only screen and (min-width: 64.063em) { 
 
     .navigation-section {
-        padding: 30px 0 0 0;
+        padding: 30px;
         h1 {
             font-size: 55px;
             margin: 80px 0 30px 0;
-//            line-height: 1;
+            width: 58%;
         }
         p {
             width: 40%;
         }
     }
     .navigation-section.home {
-        padding-bottom: 60px;
+//        padding-bottom: 60px;
     }    
     .top-bar-section.sub-nav {
         margin: 0;
         ul li {
-            margin: 0 75px 0 0;
+            margin: 0 75px -22px 0;
         }
     }
     .navigation-section.services {
