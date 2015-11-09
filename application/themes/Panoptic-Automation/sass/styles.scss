@@ -372,6 +372,20 @@ button:hover.slick-next, button:hover.slick-prev {
     }
 }
 
+/****** NEWS ******/
+
+.ccm-block-page-list-title a {
+    @extend h2;
+}
+.ccm-block-page-list-description {
+    @extend p;
+}
+.ccm-block-topic-list-header h5 {
+    @extend h2;
+}
+div.ccm-block-page-list-page-entry {
+    margin: 10px 0 30px 0;
+}
 
 /****** MEDIA QUERIES ******/
 

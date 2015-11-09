@@ -36,17 +36,17 @@ body {
   font-family: "BemboStd-Regular";
   color: #2b2b2b; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, .ccm-block-page-list-title a, .ccm-block-topic-list-header h5, h3, h4, h5, h6 {
   line-height: 1;
   font-family: inherit; }
 
 h1 {
   font-size: 34px; }
 
-h2 {
+h2, .ccm-block-page-list-title a, .ccm-block-topic-list-header h5 {
   font-size: 30px; }
 
-p {
+p, .ccm-block-page-list-description {
   font-size: 17px; }
 
 a {
@@ -108,7 +108,7 @@ header {
     font-size: 32px;
     margin: 20px 0 10px 0;
     line-height: 1; }
-  .navigation-section p {
+  .navigation-section p, .navigation-section .ccm-block-page-list-description {
     width: 100%;
     line-height: 1.4; }
 
@@ -204,7 +204,7 @@ header {
   border-left: 1px solid #76726e;
   margin-top: -60px;
   padding-top: 60px; }
-  .right-col p {
+  .right-col p, .right-col .ccm-block-page-list-description {
     font-size: 16px;
     font-family: "ProximaNova-Regular";
     margin-top: 20px;
@@ -247,7 +247,7 @@ footer {
 .home-slides {
   color: #f6ece2;
   margin-bottom: 35px; }
-  .home-slides h1, .home-slides h2, .home-slides a {
+  .home-slides h1, .home-slides h2, .home-slides .ccm-block-page-list-title a, .ccm-block-page-list-title .home-slides a, .home-slides .ccm-block-topic-list-header h5, .ccm-block-topic-list-header .home-slides h5, .home-slides a {
     color: inherit; }
 
 .home-slides .slides-nav .top-bar-section.sub-nav ul {
@@ -259,7 +259,7 @@ footer {
     border-top: none;
     border-bottom: 3px solid #f6ece2; }
 
-.slider-service div h2, .slider-service div p {
+.slider-service div h2, .slider-service div .ccm-block-page-list-title a, .ccm-block-page-list-title .slider-service div a, .slider-service div .ccm-block-topic-list-header h5, .ccm-block-topic-list-header .slider-service div h5, .slider-service div p, .slider-service div .ccm-block-page-list-description {
   padding: 0 5px; }
 
 button.slick-next, button.slick-prev {
@@ -299,11 +299,15 @@ button:hover.slick-next, button:hover.slick-prev {
   .controls #next-services-home {
     float: right; }
 
+/****** NEWS ******/
+div.ccm-block-page-list-page-entry {
+  margin: 10px 0 30px 0; }
+
 /****** MEDIA QUERIES ******/
 /* Define mobile styles */
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 @media only screen and (min-width: 40.063em) {
-  .navigation-section p {
+  .navigation-section p, .navigation-section .ccm-block-page-list-description {
     width: 60%; }
 
   .home-slides {
@@ -319,7 +323,7 @@ button:hover.slick-next, button:hover.slick-prev {
       font-size: 55px;
       margin: 80px 0 30px 0;
       width: 58%; }
-    .navigation-section p {
+    .navigation-section p, .navigation-section .ccm-block-page-list-description {
       width: 40%; }
 
   .top-bar-section.sub-nav {
@@ -334,13 +338,13 @@ button:hover.slick-next, button:hover.slick-prev {
   h1 {
     font-size: 50px; }
 
-  p {
+  p, .ccm-block-page-list-description {
     font-size: 21px; }
 
   .main-section {
     padding: 60px 0 0 0; }
 
-  .main-section .columns.white-space-right p {
+  .main-section .columns.white-space-right p, .main-section .columns.white-space-right .ccm-block-page-list-description {
     width: 70%; }
 
   footer {
@@ -365,7 +369,7 @@ button:hover.slick-next, button:hover.slick-prev {
   .home-slides {
     color: #f6ece2;
     padding: 60px 90px; }
-    .home-slides h1, .home-slides h2 {
+    .home-slides h1, .home-slides h2, .home-slides .ccm-block-page-list-title a, .ccm-block-page-list-title .home-slides a, .home-slides .ccm-block-topic-list-header h5, .ccm-block-topic-list-header .home-slides h5 {
       color: inherit; }
     .home-slides h1 {
       margin-bottom: 30px; } }
