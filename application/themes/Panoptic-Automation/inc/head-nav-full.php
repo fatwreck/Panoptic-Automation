@@ -50,6 +50,7 @@
                           $a = new Area('Header Link');
                           $a->display($c);
                         ?>
+<!--
                         <nav>
                             <section class="top-bar-section show-for-large-up sub-nav">
                                 <ul class="left">
@@ -66,6 +67,7 @@
                                 </ul>
                             </section>
                       </nav>
+-->
                     </div>
                 </div>
             </section>

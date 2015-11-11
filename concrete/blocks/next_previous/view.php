@@ -10,30 +10,34 @@ $nextLinkText = is_object($nextCollection) ? $nextCollection->getCollectionName(
 <?php if ($previousLinkURL || $nextLinkURL || $parentLinkText): ?>
 
 <div class="ccm-block-next-previous-wrapper">
-    <?php if ($previousLabel && $previousLinkURL != ''): ?>
-    <div class="ccm-block-next-previous-header">
-        <h5><?php echo $previousLabel?></h5>
-    </div>
-    <?php endif; ?>
-
-    <?php if ($previousLinkText): ?>
-	<p class="ccm-block-next-previous-previous-link">
-		<?php echo $previousLinkURL ? '<a href="' . $previousLinkURL . '">' . $previousLinkText . '</a>' : '' ?>
- 	</p>
-	<?php endif; ?>
-
-    <?php if ($nextLabel && $nextLinkURL != ''): ?>
+    <div class="news-previous">
+        <?php if ($previousLabel && $previousLinkURL != ''): ?>
         <div class="ccm-block-next-previous-header">
-            <h5><?php echo $nextLabel?></h5>
+            <h5><?php echo $previousLabel?></h5>
         </div>
-    <?php endif; ?>
+        <?php endif; ?>
 
-    <?php if ($nextLinkText): ?>
-        <p class="ccm-block-next-previous-next-link">
-            <?php echo $nextLinkURL ? '<a href="' . $nextLinkURL . '">' . $nextLinkText . '</a>' : '' ?>
+        <?php if ($previousLinkText): ?>
+        <p class="ccm-block-next-previous-previous-link">
+            <?php echo $previousLinkURL ? '<a href="' . $previousLinkURL . '">' . $previousLinkText . '</a>' : '' ?>
         </p>
-    <?php endif; ?>
+        <?php endif; ?>
+    </div>
+    
+    <div class="news-next">
+        <?php if ($nextLabel && $nextLinkURL != ''): ?>
+            <div class="ccm-block-next-previous-header">
+                <h5><?php echo $nextLabel?></h5>
+            </div>
+        <?php endif; ?>
 
+        <?php if ($nextLinkText): ?>
+            <p class="ccm-block-next-previous-next-link">
+                <?php echo $nextLinkURL ? '<a href="' . $nextLinkURL . '">' . $nextLinkText . '</a>' : '' ?>
+            </p>
+        <?php endif; ?>
+    </div>
+    
     <?php if ($parentLinkText): ?>
 	<p class="ccm-block-next-previous-parent-link">
 		<?php echo $parentLinkURL ? '<a href="' . $parentLinkURL . '">' . $parentLinkText . '</a>' : '' ?>

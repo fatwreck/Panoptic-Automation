@@ -300,8 +300,36 @@ button:hover.slick-next, button:hover.slick-prev {
     float: right; }
 
 /****** NEWS ******/
+.ccm-block-page-list-title a {
+  margin-bottom: 5px; }
+
 div.ccm-block-page-list-page-entry {
   margin: 10px 0 30px 0; }
+
+.ccm-block-page-list-date {
+  margin: 10px 0; }
+
+.ccm-block-next-previous-wrapper {
+  margin-top: 60px; }
+
+.main-section .columns.white-space-right p.ccm-block-next-previous-previous-link, .main-section .columns.white-space-right .ccm-block-next-previous-previous-link.ccm-block-page-list-description, .main-section .columns.white-space-right p.ccm-block-next-previous-next-link, .main-section .columns.white-space-right .ccm-block-next-previous-next-link.ccm-block-page-list-description {
+  width: 100%; }
+
+.news-previous {
+  float: left;
+  width: 45%; }
+
+.news-next {
+  float: right;
+  text-align: right;
+  width: 45%; }
+
+.ccm-block-next-previous-parent-link {
+  text-align: center;
+  width: 100%; }
+
+.ccm-block-next-previous-header h5, .ccm-block-next-previous-parent-link {
+  font-weight: bold; }
 
 /****** MEDIA QUERIES ******/
 /* Define mobile styles */
@@ -415,3 +443,5 @@ div.ccm-block-page-list-page-entry {
 .fadeInUp {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp; }
+
+/*# sourceMappingURL=styles.css.map */
