@@ -8,10 +8,17 @@
             <a href="contact.php" class="small radius button dark">Message Us</a>
         </div>
         <div class="small-12 medium-6 large-7 columns news">
-            <p class="date right">September 19, 2015</p>
             <h1>News</h1>
+            <?php
+                $a = new Area('Latest News');
+                $a->display($c);
+            ?>
+<!--
+            <p class="date right">September 19, 2015</p>
+            
             <p>Panoptic Automation Solutions is a Calgary based consulting firm and has been providing automation, instrumentation and electrical services since its inception in 2012.</p>
             <p class="date right"><a href="">Read More</a></p>
+-->
         </div>
     </div>
     <div class="row home-services-bg home-slides">

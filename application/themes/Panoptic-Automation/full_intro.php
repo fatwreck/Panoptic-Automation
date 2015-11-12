@@ -22,7 +22,7 @@
                 </div>
                 <div class="small-12 medium-7 large-8 columns white-space-right">
                     <?php
-                        $a = new Area('Bio');
+                        $a = new Area('Employee Bio');
                         $a->display($c);
                     ?>
                 </div>

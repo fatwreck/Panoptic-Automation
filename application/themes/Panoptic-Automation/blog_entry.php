@@ -7,9 +7,9 @@
                 <div class="large-2 columns left-col show-for-large-up"></div>
                 <div class="small-12 large-10 columns white-space-right">
                     <?php
-                      $a = new Area('Blog Post');
-                      $a->display($c);
-                  ?>
+                        $a = new Area('Blog Post');
+                        $a->display($c);
+                    ?>
                 </div>
             </div>
         </div>
