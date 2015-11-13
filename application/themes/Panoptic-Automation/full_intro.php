@@ -12,22 +12,12 @@
                     ?>
                 </div>
             </div>
-            <div class="row hr"><div class="small-12 columns"></div></div>
-            <div class="row">
-                <div class="small-12 medium-3 large-2 columns about-pics">
-                    <?php
-                        $a = new Area('Left Small Picture');
-                        $a->display($c);
-                    ?>
-                </div>
-                <div class="small-12 medium-7 large-8 columns white-space-right">
-                    <?php
-                        $a = new Area('Employee Bio');
-                        $a->display($c);
-                    ?>
-                </div>
-                <div class="medium-2 large-2 columns show-for-medium-up"></div>
-            </div>
+            
+            <?php
+                $a = new Area('employeebio');
+                $a->display($c);
+            ?>
+            
         </div>
         <div class="large-2 columns right-col show-for-large-up">
             <?php

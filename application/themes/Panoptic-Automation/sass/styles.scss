@@ -57,7 +57,8 @@ $font-proxbold: 'ProximaNova-Bold';
 $font-bemboreg: 'BemboStd-Regular';
 $font-bembosemi: 'BemboStd-Semibold';
 
-$light-grey: #76726e;
+$light-grey: #fafafa;
+$brown: #76726e;
 $grey: #2b2b2b;
 $cream: #f6ece2;
 $border: 1px solid red;
@@ -88,16 +89,21 @@ a {
     color: $grey;
 }
 a:hover {
-    color: $light-grey;
+    color: $brown;
 }
 .hr-full {
     width: 103%;
     margin: 40px -1.6%;
-    border-top: 1px solid $light-grey;
+    border-top: 1px solid $brown;
 }
 .row.hr {
-    border-top: 1px solid $light-grey;
+    border-top: 1px solid $brown;
     margin: 20px -16px 40px -16px;
+}
+.main-section li {
+    font-size: 17px;
+    margin-bottom: 1.25rem;
+    text-rendering: optimizeLegibility;
 }
 header {
   background-color: $grey;
@@ -112,6 +118,12 @@ header {
     display: block;
     margin: 15px auto;
   }
+.main-section h1 {
+    margin-bottom: 20px;
+}
+.main-section h3 {
+    margin: 15px 0;
+}
 
 
 /*******************************
@@ -122,6 +134,23 @@ header {
 
 .row {
   max-width: 1415px;
+}
+
+/****** TABLES ******/
+table {
+    width: 100%;
+    border: none;
+}
+table tr td {
+    @extend p;
+    strong {
+        margin: 0 0 10px 0;
+        display: block;
+    }
+}
+
+table tr.even, table tr.alt, table tr:nth-of-type(even) {
+    background-color: $light-grey;
 }
 
 /****** TOP BAR ******/
@@ -175,7 +204,7 @@ header {
     }
 }
 .top-bar-section ul {
-    border-top: 1px solid $light-grey;
+    border-top: 1px solid $brown;
     li {
         list-style: none;
         border-top: 3px solid transparent;
@@ -209,6 +238,9 @@ header {
 }
 .top-bar-section.top-bar-section ul li.active, .top-bar-section.top-bar-section ul li {
     margin-left: 0;
+}
+.top-bar-section.top-bar-section ul li:last-child {
+    margin-right: 0;
 }
 .top-bar-section li:not(.has-form):not(.button):hover {
     border-top: 3px solid $cream;
@@ -259,7 +291,7 @@ header {
         color: $cream;
     }
 .right-col {
-    border-left: 1px solid $light-grey;
+    border-left: 1px solid $brown;
     margin-top: -60px;
     padding-top: 60px;
     p {
@@ -270,8 +302,12 @@ header {
     }
 }
 .left-col {
-    border-top: 1px solid $light-grey;
+    border-top: 1px solid $brown;
     margin-top: 30px;
+}
+
+.page-template-index .top-bar-section.sub-nav ul {
+    border: none;
 }
 
 /****** FOOTER ******/
@@ -319,10 +355,11 @@ footer {
     }
 }
 .home-slides .slides-nav .top-bar-section.sub-nav ul {
-    border-bottom: 1px solid $light-grey;
+    border-bottom: 1px solid $brown;
     border-top: none;
     li {
         border-top: none;
+        margin-bottom: auto;
     }
     li.active, li:hover {
         border-top: none;
@@ -430,6 +467,21 @@ div.ccm-block-page-list-page-entry {
     font-weight: bold;
 }
 
+/****** GOOGLE MAPS ******/
+.google-maps {
+    position: relative;
+    padding-bottom: 75%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+
 /****** MEDIA QUERIES ******/
 
 // Small screens
@@ -485,16 +537,24 @@ div.ccm-block-page-list-page-entry {
         background-size: contain; 
     }
     h1 {
-      font-size: 50px;
+        font-size: 50px;
+        margin-bottom: 40px;
     }
+    .main-section h3 {
+        margin: 30px 0;
+    }
+
     p {
         font-size: 21px;
     }
     .main-section {
       padding: 60px 0 0 0;
     }
-    .main-section .columns.white-space-right p {
+    .main-section .columns.white-space-right p, .main-section .columns.white-space-right ul {
         width: 70%;
+    }
+    .main-section .columns.white-space-right ul li {
+        font-size: 21px;
     }
     footer {
         background-color: #fff;
@@ -519,6 +579,14 @@ div.ccm-block-page-list-page-entry {
         background-image: url(../img/home-service-bg.jpg);
         background-size: cover;
     }
+    .home-solutions-bg {
+        background-image: url(../img/home-solutions-bg.jpg);
+        background-size: cover;
+    }
+    .home-testimonials-bg {
+        background-image: url(../img/home-testimonials-bg.jpg);
+        background-size: cover;
+    }    
     .home-slides {
         color: $cream;
         padding: 60px 90px;
@@ -538,7 +606,7 @@ div.ccm-block-page-list-page-entry {
 @media only screen and (min-width: 90.063em) { 
 
     .top-bar-section.sub-nav ul li {
-        margin: 0 105px 0 0;
+        margin: 0 105px -22px 0;
     }
     
 } /* min-width 1441px, xlarge screens */

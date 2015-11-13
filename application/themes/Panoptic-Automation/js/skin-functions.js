@@ -48,6 +48,27 @@ $(document).ready(function (){
         nextArrow: $('#next-services-home')
       });
     
+    $('.slider-solutions').slick({
+        autoplay: true,
+        speed: 600,
+        arrows: false,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        infinite: true,
+        prevArrow: $('#prev-solutions-home'),
+        nextArrow: $('#next-solutions-home')
+      });
+    
+    $('.slider-testimonials').slick({
+        autoplay: true,
+        speed: 600,
+        arrows: false,
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        infinite: true,
+        prevArrow: $('#prev-solutions-home'),
+        nextArrow: $('#next-solutions-home')
+      });    
     // GET URL
 //    var newURL = window.location.pathname;
 //    console.log (newURL);

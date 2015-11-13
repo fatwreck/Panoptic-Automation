@@ -46,7 +46,7 @@ h1 {
 h2, .ccm-block-page-list-title a, .ccm-block-topic-list-header h5 {
   font-size: 30px; }
 
-p, .ccm-block-page-list-description {
+p, table tr td, .ccm-block-page-list-description {
   font-size: 17px; }
 
 a {
@@ -64,6 +64,11 @@ a:hover {
   border-top: 1px solid #76726e;
   margin: 20px -16px 40px -16px; }
 
+.main-section li {
+  font-size: 17px;
+  margin-bottom: 1.25rem;
+  text-rendering: optimizeLegibility; }
+
 header {
   background-color: #2b2b2b; }
 
@@ -74,6 +79,12 @@ header {
   display: block;
   margin: 15px auto; }
 
+.main-section h1 {
+  margin-bottom: 20px; }
+
+.main-section h3 {
+  margin: 15px 0; }
+
 /*******************************
 
       FOUNDATION OVERWRITES
@@ -81,6 +92,18 @@ header {
 *******************************/
 .row {
   max-width: 1415px; }
+
+/****** TABLES ******/
+table {
+  width: 100%;
+  border: none; }
+
+table tr td strong {
+  margin: 0 0 10px 0;
+  display: block; }
+
+table tr.even, table tr.alt, table tr:nth-of-type(even) {
+  background-color: #fafafa; }
 
 /****** TOP BAR ******/
 .tab-bar-section img {
@@ -108,7 +131,7 @@ header {
     font-size: 32px;
     margin: 40px 0 10px 0;
     line-height: 1; }
-  .navigation-section p, .navigation-section .ccm-block-page-list-description {
+  .navigation-section p, .navigation-section table tr td, table tr .navigation-section td, .navigation-section .ccm-block-page-list-description {
     width: 100%;
     line-height: 1.4; }
 
@@ -153,6 +176,9 @@ header {
 
 .top-bar-section.top-bar-section ul li.active, .top-bar-section.top-bar-section ul li {
   margin-left: 0; }
+
+.top-bar-section.top-bar-section ul li:last-child {
+  margin-right: 0; }
 
 .top-bar-section li:not(.has-form):not(.button):hover {
   border-top: 3px solid #f6ece2;
@@ -204,7 +230,7 @@ header {
   border-left: 1px solid #76726e;
   margin-top: -60px;
   padding-top: 60px; }
-  .right-col p, .right-col .ccm-block-page-list-description {
+  .right-col p, .right-col table tr td, table tr .right-col td, .right-col .ccm-block-page-list-description {
     font-size: 16px;
     font-family: "ProximaNova-Regular";
     margin-top: 20px;
@@ -213,6 +239,9 @@ header {
 .left-col {
   border-top: 1px solid #76726e;
   margin-top: 30px; }
+
+.page-template-index .top-bar-section.sub-nav ul {
+  border: none; }
 
 /****** FOOTER ******/
 footer {
@@ -254,12 +283,13 @@ footer {
   border-bottom: 1px solid #76726e;
   border-top: none; }
   .home-slides .slides-nav .top-bar-section.sub-nav ul li {
-    border-top: none; }
+    border-top: none;
+    margin-bottom: auto; }
   .home-slides .slides-nav .top-bar-section.sub-nav ul li.active, .home-slides .slides-nav .top-bar-section.sub-nav ul li:hover {
     border-top: none;
     border-bottom: 3px solid #f6ece2; }
 
-.slider-service div h2, .slider-service div .ccm-block-page-list-title a, .ccm-block-page-list-title .slider-service div a, .slider-service div .ccm-block-topic-list-header h5, .ccm-block-topic-list-header .slider-service div h5, .slider-service div p, .slider-service div .ccm-block-page-list-description {
+.slider-service div h2, .slider-service div .ccm-block-page-list-title a, .ccm-block-page-list-title .slider-service div a, .slider-service div .ccm-block-topic-list-header h5, .ccm-block-topic-list-header .slider-service div h5, .slider-service div p, .slider-service div table tr td, table tr .slider-service div td, .slider-service div .ccm-block-page-list-description {
   padding: 0 5px; }
 
 button.slick-next, button.slick-prev {
@@ -312,7 +342,7 @@ div.ccm-block-page-list-page-entry {
 .ccm-block-next-previous-wrapper {
   margin-top: 60px; }
 
-.main-section .columns.white-space-right p.ccm-block-next-previous-previous-link, .main-section .columns.white-space-right .ccm-block-next-previous-previous-link.ccm-block-page-list-description, .main-section .columns.white-space-right p.ccm-block-next-previous-next-link, .main-section .columns.white-space-right .ccm-block-next-previous-next-link.ccm-block-page-list-description {
+.main-section .columns.white-space-right p.ccm-block-next-previous-previous-link, .main-section .columns.white-space-right table tr td.ccm-block-next-previous-previous-link, table tr .main-section .columns.white-space-right td.ccm-block-next-previous-previous-link, .main-section .columns.white-space-right .ccm-block-next-previous-previous-link.ccm-block-page-list-description, .main-section .columns.white-space-right p.ccm-block-next-previous-next-link, .main-section .columns.white-space-right table tr td.ccm-block-next-previous-next-link, table tr .main-section .columns.white-space-right td.ccm-block-next-previous-next-link, .main-section .columns.white-space-right .ccm-block-next-previous-next-link.ccm-block-page-list-description {
   width: 100%; }
 
 .news-previous {
@@ -331,11 +361,25 @@ div.ccm-block-page-list-page-entry {
 .ccm-block-next-previous-header h5, .ccm-block-next-previous-parent-link {
   font-weight: bold; }
 
+/****** GOOGLE MAPS ******/
+.google-maps {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden; }
+
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important; }
+
 /****** MEDIA QUERIES ******/
 /* Define mobile styles */
 /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 @media only screen and (min-width: 40.063em) {
-  .navigation-section p, .navigation-section .ccm-block-page-list-description {
+  .navigation-section p, .navigation-section table tr td, table tr .navigation-section td, .navigation-section .ccm-block-page-list-description {
     width: 60%; }
 
   .home-slides {
@@ -351,7 +395,7 @@ div.ccm-block-page-list-page-entry {
       font-size: 55px;
       margin: 80px 0 30px 0;
       width: 58%; }
-    .navigation-section p, .navigation-section .ccm-block-page-list-description {
+    .navigation-section p, .navigation-section table tr td, table tr .navigation-section td, .navigation-section .ccm-block-page-list-description {
       width: 40%; }
 
   .top-bar-section.sub-nav {
@@ -364,16 +408,23 @@ div.ccm-block-page-list-page-entry {
     background-size: contain; }
 
   h1 {
-    font-size: 50px; }
+    font-size: 50px;
+    margin-bottom: 40px; }
 
-  p, .ccm-block-page-list-description {
+  .main-section h3 {
+    margin: 30px 0; }
+
+  p, table tr td, .ccm-block-page-list-description {
     font-size: 21px; }
 
   .main-section {
     padding: 60px 0 0 0; }
 
-  .main-section .columns.white-space-right p, .main-section .columns.white-space-right .ccm-block-page-list-description {
+  .main-section .columns.white-space-right p, .main-section .columns.white-space-right table tr td, table tr .main-section .columns.white-space-right td, .main-section .columns.white-space-right .ccm-block-page-list-description, .main-section .columns.white-space-right ul {
     width: 70%; }
+
+  .main-section .columns.white-space-right ul li {
+    font-size: 21px; }
 
   footer {
     background-color: #fff;
@@ -394,6 +445,14 @@ div.ccm-block-page-list-page-entry {
     background-image: url(../img/home-service-bg.jpg);
     background-size: cover; }
 
+  .home-solutions-bg {
+    background-image: url(../img/home-solutions-bg.jpg);
+    background-size: cover; }
+
+  .home-testimonials-bg {
+    background-image: url(../img/home-testimonials-bg.jpg);
+    background-size: cover; }
+
   .home-slides {
     color: #f6ece2;
     padding: 60px 90px; }
@@ -405,7 +464,7 @@ div.ccm-block-page-list-page-entry {
 /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
 @media only screen and (min-width: 90.063em) {
   .top-bar-section.sub-nav ul li {
-    margin: 0 105px 0 0; } }
+    margin: 0 105px -22px 0; } }
 /* min-width 1441px, xlarge screens */
 /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
 /* min-width 1921px, xxlarge screens */
