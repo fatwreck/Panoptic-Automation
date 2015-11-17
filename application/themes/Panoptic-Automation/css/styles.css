@@ -240,8 +240,23 @@ table tr.even, table tr.alt, table tr:nth-of-type(even) {
   border-top: 1px solid #76726e;
   margin-top: 30px; }
 
+.page-template-index #bgImg {
+  background-image: url(../img/home-bg.jpg);
+  background-size: cover; }
+
 .page-template-index .top-bar-section.sub-nav ul {
   border: none; }
+
+div.ccm-notification-help-launcher {
+  display: none; }
+
+/****** Off-Canvas Nav ******/
+ul.off-canvas-list ul.nav li ul {
+  height: 0px;
+  overflow: hidden; }
+
+ul.off-canvas-list ul.nav li.nav-selected.nav-path-selected ul {
+  height: auto; }
 
 /****** FOOTER ******/
 footer {
@@ -269,22 +284,38 @@ footer {
   background-color: #fff;
   padding: 20px; }
 
+.page-template-index .ccm-block-page-list-title {
+  margin-bottom: 20px; }
+
 .home-services-bg {
   background-image: url(../img/home-service-bg.jpg);
   background-size: cover; }
 
+.home-solutions-bg {
+  background-image: url(../img/home-solutions-bg.jpg);
+  background-size: cover; }
+
+.home-testimonials-bg {
+  background-image: url(../img/home-testimonials-bg.jpg);
+  background-size: cover; }
+
 .home-slides {
   color: #f6ece2;
-  margin-bottom: 35px; }
+  margin-bottom: 35px;
+  padding: 20px 0; }
   .home-slides h1, .home-slides h2, .home-slides .ccm-block-page-list-title a, .ccm-block-page-list-title .home-slides a, .home-slides .ccm-block-topic-list-header h5, .ccm-block-topic-list-header .home-slides h5, .home-slides a {
     color: inherit; }
+
+button:focus {
+  outline: none; }
 
 .home-slides .slides-nav .top-bar-section.sub-nav ul {
   border-bottom: 1px solid #76726e;
   border-top: none; }
   .home-slides .slides-nav .top-bar-section.sub-nav ul li {
     border-top: none;
-    margin-bottom: auto; }
+    margin-bottom: auto;
+    border-bottom: 3px solid transparent; }
   .home-slides .slides-nav .top-bar-section.sub-nav ul li.active, .home-slides .slides-nav .top-bar-section.sub-nav ul li:hover {
     border-top: none;
     border-bottom: 3px solid #f6ece2; }
@@ -403,8 +434,18 @@ div.ccm-block-page-list-page-entry {
     .top-bar-section.sub-nav ul li {
       margin: 0 75px -22px 0; }
 
-  .navigation-section.services {
+  .top-bar-section ul.right.main-nav ul li.nav-path-selected {
+    border-top: 3px solid #f6ece2; }
+
+  .top-bar-section.sub-nav li.nav-selected.nav-path-selected {
+    border-top: 3px solid #f6ece2; }
+
+  .navigation-section.service-bg {
     background: url("../img/services.jpg") right no-repeat;
+    background-size: contain; }
+
+  .navigation-section.solutions-bg {
+    background: url("../img/solutions.jpg") right no-repeat;
     background-size: contain; }
 
   h1 {
@@ -442,15 +483,12 @@ div.ccm-block-page-list-page-entry {
 
   /**** HOME ****/
   .home-services-bg {
-    background-image: url(../img/home-service-bg.jpg);
     background-size: cover; }
 
   .home-solutions-bg {
-    background-image: url(../img/home-solutions-bg.jpg);
     background-size: cover; }
 
   .home-testimonials-bg {
-    background-image: url(../img/home-testimonials-bg.jpg);
     background-size: cover; }
 
   .home-slides {

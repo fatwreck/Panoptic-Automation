@@ -40,10 +40,10 @@ $(document).ready(function (){
     $('.slider-service').slick({
         autoplay: true,
         speed: 600,
-        arrows: false,
         slidesToShow: 1,
         adaptiveHeight: true,
         infinite: true,
+        
         prevArrow: $('#prev-services-home'),
         nextArrow: $('#next-services-home')
       });
@@ -54,6 +54,7 @@ $(document).ready(function (){
         arrows: false,
         slidesToShow: 1,
         adaptiveHeight: true,
+        pauseOnHover:true,
         infinite: true,
         prevArrow: $('#prev-solutions-home'),
         nextArrow: $('#next-solutions-home')
@@ -68,35 +69,28 @@ $(document).ready(function (){
         infinite: true,
         prevArrow: $('#prev-solutions-home'),
         nextArrow: $('#next-solutions-home')
-      });    
-    // GET URL
-//    var newURL = window.location.pathname;
-//    console.log (newURL);
-//    
-//    if (newURL === 'services.php') {
-//        document.getElementById('bgImg').className = 'navigation-section' + newURL;
-//    }
+      }); 
     
-    // ACTIVE CLASS ON NAV
-//    $(function() {
-//         var pgurl = window.location.href.substr(window.location.href
-//    .lastIndexOf("/")+1);
-//         $("#nav ul li a").each(function(){
-//              if($(this).attr("href") == pgurl || $(this).attr("href") == '' )
-//              $(this).addClass("active");
-//         })
-//    });
-    $(function () {
-        var url = window.location.pathname; //sets the variable "url" to the pathname of the current window
-        var activePage = url.substring(url.lastIndexOf('/') + 1); //sets the variable "activePage" as the substring after the last "/" in the "url" variable
-        $('.top-bar-section ul.main-nav li a').each(function () { //looks in each link item within the primary-nav list
-            var linkPage = this.href.substring(this.href.lastIndexOf('/') + 1); //sets the variable "linkPage" as the substring of the url path in each &lt;a&gt;
+    
+    // GET URL FOR HEADER IMAGE
+//    switch (window.location.pathname) {
+//    case '/our-services':
+//        $('#bgImg').addClass('navigation-section service-bg');
+//        break;
+//    case '/our-solutions':
+//        $('#bgImg').addClass('navigation-section solutions-bg');
+//        break;
+//    };
+    $(function() {
+      var loc = window.location.href; 
+      if(/our-services/.test(loc)) {
+        $('#bgImg').addClass('navigation-section service-bg');
+      }
+      if(/our-solutions/.test(loc)) {
+        $('#bgImg').addClass('navigation-section solutions-bg');
+      }
+    });
 
-            if (activePage == linkPage) { //compares the path of the current window to the path of the linked page in the nav item
-                $(this).parent().addClass('active'); //if the above is true, add the "active" class to the parent of the &lt;a&gt; which is the &lt;li&gt; in the nav list
-            }
-        });
-    })
     
     
     

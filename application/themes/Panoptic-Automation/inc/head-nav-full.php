@@ -20,7 +20,7 @@
                 <div class="row">
                     <div class="large-12 columns">
                         <section class="left tab-bar-section">
-                          <a href="/"><img src="<?= $view->getThemePath() ?>/img/Panoptic-Automation-Solutions-Logo.svg" /></a>
+                          <a href="/cms/"><img src="<?= $view->getThemePath() ?>/img/Panoptic-Automation-Solutions-Logo.svg" /></a>
                         </section>
                         <nav class="top-bar" data-topbar>
                             <section class="top-bar-section show-for-large-up">
@@ -71,23 +71,35 @@
         
         <aside class="right-off-canvas-menu">
           <ul class="off-canvas-list">
+<!--
+                <?php
+                    $a = new GlobalArea('Off-Canvas Nav');
+                    $a->display($c);
+                ?>
+-->
             <li><label>Users</label></li>
-            <li><a href="#">Hari Seldon</a></li>
-            <li class="has-submenu"><a href="#">R. Giskard Reventlov</a>
+            <li><a href="/cms/">Home</a></li>
+            <li class="has-submenu"><a href="#">Our Services</a>
                 <ul class="right-submenu">
                     <li class="back"><a href="#">Back</a></li>
-                    <li><label>Level 1</label></li>
-                    <li><a href="#">Link 1</a></li>
-                    <li class="has-submenu"><a href="#">Link 2 w/ submenu</a>
-                        <ul class="right-submenu">
-                            <li class="back"><a href="#">Back</a></li>
-                            <li><label>Level 2</label></li>
-                            <li><a href="#">...</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">...</a></li>
+                    <li><label>Our Services</label></li>
+                    <li><a href="/cms/our-services/electrical-engineering">Electrical Engineering</a></li>
+                    <li><a href="/cms/our-services/instrumentation-engineering">Instrumentation Engineering</a></li>
+                    <li><a href="/cms/our-services/control-systems">Control Systems</a></li>
                 </ul>
             </li>
-            <li><a href="#">...</a></li>
+            <li class="has-submenu"><a href="#">Our Solutions</a>
+                <ul class="right-submenu">
+                    <li class="back"><a href="#">Back</a></li>
+                    <li><label>Our Solutions</label></li>
+                    <li><a href="/cms/our-solutions/optimization">Optimization</a></li>
+                    <li><a href="/cms/our-solutions/remote-support-opportunities">Remote Support Opportunities</a></li>
+                    <li><a href="/cms/our-solutions/alarm-rationalization">Alarm Rationalization</a></li>
+                </ul>
+            </li>
+            <li><a href="/cms/news">News</a></li>
+            <li><a href="/cms/about">About</a></li>
+            <li><a href="/cms/careers">Careers</a></li>
+            <li><a href="/cms/contact">Contact</a></li>
           </ul>
         </aside>      
