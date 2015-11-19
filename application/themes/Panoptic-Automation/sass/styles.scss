@@ -88,7 +88,7 @@ p {
 a {
     color: $grey;
 }
-a:hover {
+a:hover, a:focus {
     color: $brown;
 }
 .hr-full {
@@ -378,9 +378,13 @@ footer {
     color: $cream;
     margin-bottom: 35px;
     padding: 20px 0;
-    h1, h2, a {
+    h1, h2, a, h3 {
         color: inherit;
     }
+}
+.slider-testimonials {
+    width: 100%;
+    margin: 0 auto;
 }
 button:focus {
   outline: none;
@@ -436,7 +440,7 @@ button:hover.slick-next, button:hover.slick-prev {
         background-color: transparent;
         margin-top: 50px;
     }
-    #next-services-home {
+    #next-services-home, #next-solutions-home {
         float: right;
     }
 }
@@ -459,22 +463,6 @@ div.ccm-block-page-list-page-entry {
 .ccm-block-page-list-date {
     margin: 10px 0;
 }
-//.ccm-block-next-previous-header:last-child h5 {
-//    float: right;
-//    border: $border;
-//}
-//.main-section .columns.white-space-right p.ccm-block-next-previous-next-link {
-//    border: $border;
-//    width: 100%;
-//    display: inline-block;
-//}
-//.ccm-block-next-previous-next-link a {
-//    float: right;
-//}
-//.ccm-block-next-previous-previous-link {
-//    float: left;
-//}
-
 .ccm-block-next-previous-wrapper {
     margin-top: 60px;
 }
@@ -590,6 +578,7 @@ div.ccm-block-page-list-page-entry {
     p {
         font-size: 21px;
     }
+    
     .main-section {
       padding: 60px 0 0 0;
     }
@@ -618,16 +607,19 @@ div.ccm-block-page-list-page-entry {
     
     /**** HOME ****/
     
+    .message-us {
+        margin-bottom: 20px;
+    }
+    .page-template-index .main-section {
+      padding: 30px 0 0 0;
+    }
     .home-services-bg {
-//        background-image: url(../img/home-service-bg.jpg);
         background-size: cover;
     }
     .home-solutions-bg {
-//        background-image: url(../img/home-solutions-bg.jpg);
         background-size: cover;
     }
     .home-testimonials-bg {
-//        background-image: url(../img/home-testimonials-bg.jpg);
         background-size: cover;
     }    
     .home-slides {
@@ -639,6 +631,9 @@ div.ccm-block-page-list-page-entry {
         h1 {
             margin-bottom: 30px;
         }
+    }
+    .slider-testimonials {
+        width: 70%;
     }
 
 } /* min-width 1025px, large screens */
