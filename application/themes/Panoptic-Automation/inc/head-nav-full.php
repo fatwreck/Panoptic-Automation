@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="<?= $view->getThemePath() ?>/js/vendor/slick/slick.css"/>
     <link rel="stylesheet" href="<?= $view->getThemePath() ?>/css/styles.css" />
     <script src="<?= $view->getThemePath() ?>/js/vendor/modernizr.js"></script>
+    <script src="<?= $view->getThemePath() ?>/js/vendor/prefixtree.js"></script>  
   </head>
   <body>
     <div class="<?= $c->getPageWrapperClass() ?>">
@@ -77,12 +78,13 @@
                     $a->display($c);
                 ?>
 -->
-            <li><label>Users</label></li>
+<!--            <li><label>Users</label></li>-->
             <li><a href="/cms/">Home</a></li>
             <li class="has-submenu"><a href="#">Our Services</a>
                 <ul class="right-submenu">
                     <li class="back"><a href="#">Back</a></li>
                     <li><label>Our Services</label></li>
+                    <li><a href="/cms/our-services/">Overview</a></li>
                     <li><a href="/cms/our-services/electrical-engineering">Electrical Engineering</a></li>
                     <li><a href="/cms/our-services/instrumentation-engineering">Instrumentation Engineering</a></li>
                     <li><a href="/cms/our-services/control-systems">Control Systems</a></li>
@@ -92,6 +94,7 @@
                 <ul class="right-submenu">
                     <li class="back"><a href="#">Back</a></li>
                     <li><label>Our Solutions</label></li>
+                    <li><a href="/cms/our-solutions/">Overview</a></li>
                     <li><a href="/cms/our-solutions/optimization">Optimization</a></li>
                     <li><a href="/cms/our-solutions/remote-support-opportunities">Remote Support Opportunities</a></li>
                     <li><a href="/cms/our-solutions/alarm-rationalization">Alarm Rationalization</a></li>
@@ -102,4 +105,4 @@
             <li><a href="/cms/careers">Careers</a></li>
             <li><a href="/cms/contact">Contact</a></li>
           </ul>
-        </aside>      
+        </aside>

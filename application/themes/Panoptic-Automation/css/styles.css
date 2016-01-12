@@ -52,7 +52,7 @@ p, table tr td, .ccm-block-page-list-description {
 a {
   color: #2b2b2b; }
 
-a:hover {
+a:hover, a:focus {
   color: #76726e; }
 
 .hr-full {
@@ -279,9 +279,18 @@ footer {
     margin-right: 0; }
 
 /****** HOME PAGE ******/
+.page-template-index .main-section {
+  padding: 0; }
+
 .news {
   margin-top: 0;
   background-color: #fff;
+  padding: 20px; }
+
+.news h1 {
+  display: none; }
+
+.message-us {
   padding: 20px; }
 
 .page-template-index .ccm-block-page-list-title {
@@ -303,8 +312,12 @@ footer {
   color: #f6ece2;
   margin-bottom: 35px;
   padding: 20px 0; }
-  .home-slides h1, .home-slides h2, .home-slides .ccm-block-page-list-title a, .ccm-block-page-list-title .home-slides a, .home-slides .ccm-block-topic-list-header h5, .ccm-block-topic-list-header .home-slides h5, .home-slides a {
+  .home-slides h1, .home-slides h2, .home-slides .ccm-block-page-list-title a, .ccm-block-page-list-title .home-slides a, .home-slides .ccm-block-topic-list-header h5, .ccm-block-topic-list-header .home-slides h5, .home-slides a, .home-slides h3 {
     color: inherit; }
+
+.slider-testimonials {
+  width: 100%;
+  margin: 0 auto; }
 
 button:focus {
   outline: none; }
@@ -357,8 +370,62 @@ button:hover.slick-next, button:hover.slick-prev {
   .controls button {
     background-color: transparent;
     margin-top: 50px; }
-  .controls #next-services-home {
+  .controls #next-services-home, .controls #next-solutions-home {
     float: right; }
+
+/****** STOCK TICKER ******/
+.marquee {
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 37px;
+  position: relative;
+  background-color: #2b2b2b;
+  color: #ccc;
+  font-size: 14px;
+  font-family: 'ProximaNova-Regular'; }
+
+.marquee span.stockbox {
+  display: inline-block;
+  padding-left: 100%;
+  margin-top: 8px;
+  animation: marquee 15s linear infinite;
+  position: inherit;
+  font-size: 14px;
+  width: initial; }
+
+.marquee span.stockbox a {
+  color: #ccc;
+  text-decoration: underline;
+  margin-right: 7px; }
+
+.marquee span.stockbox:hover {
+  animation-play-state: paused; }
+
+span.stocks {
+  display: inline-block;
+  text-transform: uppercase;
+  text-indent: 0;
+  white-space: nowrap;
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 2px dotted #cec6be; }
+
+span.stocks:last-child {
+  border: none; }
+
+span.stocks span a {
+  color: #fff; }
+
+/* Make it move */
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0); }
+  100% {
+    transform: translate(-100%, 0); } }
+.no-padding {
+  padding: 0; }
 
 /****** NEWS ******/
 .ccm-block-page-list-title a {
@@ -481,7 +548,13 @@ div.ccm-block-page-list-page-entry {
       margin-top: 20px;
       font-size: 16px; }
 
+  .news h1 {
+    display: block; }
+
   /**** HOME ****/
+  .message-us {
+    padding: 0; }
+
   .home-services-bg {
     background-size: cover; }
 
@@ -497,7 +570,10 @@ div.ccm-block-page-list-page-entry {
     .home-slides h1, .home-slides h2, .home-slides .ccm-block-page-list-title a, .ccm-block-page-list-title .home-slides a, .home-slides .ccm-block-topic-list-header h5, .ccm-block-topic-list-header .home-slides h5 {
       color: inherit; }
     .home-slides h1 {
-      margin-bottom: 30px; } }
+      margin-bottom: 30px; }
+
+  .slider-testimonials {
+    width: 70%; } }
 /* min-width 1025px, large screens */
 /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
 @media only screen and (min-width: 90.063em) {

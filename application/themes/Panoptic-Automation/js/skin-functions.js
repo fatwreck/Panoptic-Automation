@@ -81,17 +81,39 @@ $(document).ready(function (){
 //        $('#bgImg').addClass('navigation-section solutions-bg');
 //        break;
 //    };
+    
+//    $(function() {
+//      var loc = window.location.href; 
+//      if(/our-services/.test(loc)) {
+//        $('#bgImg').addClass('navigation-section service-bg');
+//      }
+//      if(/our-solutions/.test(loc)) {
+//        $('#bgImg').addClass('navigation-section solutions-bg');
+//      }
+//    });   
+    
+    
     $(function() {
-      var loc = window.location.href; 
-      if(/our-services/.test(loc)) {
-        $('#bgImg').addClass('navigation-section service-bg');
-      }
-      if(/our-solutions/.test(loc)) {
-        $('#bgImg').addClass('navigation-section solutions-bg');
-      }
+        if(window.location.href.indexOf("/our-services/") < 1) {
+            $('#bgImg').addClass('navigation-section service-bg');
+        }
     });
+    
+        
 
-    
-    
+//     $(function() {
+//         if (/our-services/.test(window.location.href)) {
+//             $('#bgImg').addClass('navigation-section service-bg');
+//         } 
+//     });
+        
+//      var loc = window.location.indexOf; 
+//      if(/our-services/.test(loc)) {
+//        $('#bgImg').addClass('navigation-section service-bg');
+//      }
+//      if(/our-solutions/.test(loc)) {
+//        $('#bgImg').addClass('');
+//      }
+//    });       
     
 });
